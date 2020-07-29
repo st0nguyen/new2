@@ -97,12 +97,12 @@ class UserController extends Controller
         return redirect('admin/user/danhsach')->with('message','Xóa Người Dùng thành công!');
     }
 
-    public function getDangNhapAdmin(){
+    public function getDangnhapAdmin(){
 
             return view('admin.login');
     }
 
-    public function postDangNhapAdmin(Request $request){
+    public function postDangnhapAdmin(Request $request){
         $this->validate($request,
             [
                 'email' => 'required',
