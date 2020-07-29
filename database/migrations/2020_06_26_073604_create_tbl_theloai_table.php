@@ -16,7 +16,7 @@ class CreateTblTheloaiTable extends Migration
         Schema::create('tbl_theloai', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('Ten');
-            $table->text('TenKhongdau');
+            $table->text('TenKhongDau');
             $table->timestamps();
         });
     }
