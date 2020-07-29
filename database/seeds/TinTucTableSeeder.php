@@ -18,7 +18,7 @@ class TinTucTableSeeder extends Seeder
     	Hello Word!!!
     	</p>
     	";
-        DB::table('tbl_TinTuc')->insert([
+        DB::table('tbl_tintuc')->insert([
             ['idLoaiTin'=>'1','TieuDe' => 'Lần đầu ĐH FPT cấp học bổng tiến sĩ ','TieuDeKhongDau' => 'Lan-Dau-Dh-Fpt-Cap-Hoc-Bong-Tien-Si','TomTat' => 'Bên cạnh 400 suất học bổng Nguyễn Văn Đạo, ĐH FPT lần đầu tiên chọn ra 30 học sinh xuất sắc nhất để cấp học bổng toàn phần đào tạo từ cử nhân lên thẳng tiến sĩ, với tổng giá trị quỹ lên tới 5 triệu USD.','NoiDung' => $NoiDung,'Hinh' => 'FPT-2.jpg','NoiBat' => 1],
             ['idLoaiTin'=>'1','TieuDe' => '300 tỷ đồng phát triển giáo dục mầm non ','TieuDeKhongDau' => '300-Ty-Dong-Phat-Trien-Giao-Duc-Mam-Non','TomTat' => 'Bộ Giáo dục và Đào tạo đang xây dựng chương trình, mục tiêu quốc gia về giáo dục giai đoạn 2011-2015, trong đó dự kiến chi 300 tỷ đồng để phát triển giáo dục mầm non năm 2011. ','NoiDung' => $NoiDung,'Hinh' => 'tre_em_set_sub.jpg','NoiBat' => 1],
             ['idLoaiTin'=>'1','TieuDe' => 'Nợ giáo viên tiền tỷ chi phí phổ cập giáo dục ','TieuDeKhongDau' => 'No-Giao-Vien-Tien-Ty-Chi-Phi-Pho-Cap-Giao-Duc','TomTat' => 'Ba năm qua, nhiều giáo viên ở Khánh Hòa bỏ công sức, kể cả tiền bạc để thực hiện phổ cập giáo dục cho học sinh trên địa bàn tỉnh, song đến nay vẫn chưa nhận được tiền chính quyền chi trả. ','NoiDung' => $NoiDung,'Hinh' => 'pho-cap-giao-duc-nho-2.jpg','NoiBat' => 1],

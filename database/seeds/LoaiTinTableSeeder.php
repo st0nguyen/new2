@@ -12,7 +12,7 @@ class LoaiTinTableSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('tbl_LoaiTin')->insert([
+        DB::table('tbl_loaitin')->insert([
             ['idTheLoai'=>'1','Ten' => 'Giáo Dục','TenKhongDau' => 'Giao-Duc'],
             ['idTheLoai'=>'1','Ten' => 'Nhịp Điệu Trẻ','TenKhongDau' => 'Nhip-Dieu-Tre'],
             ['idTheLoai'=>'1','Ten' => 'Du Lịch','TenKhongDau' => 'Du-Lich'],
