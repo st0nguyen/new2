@@ -10,22 +10,57 @@ class UsersTableSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        //
-        for($i = 1; $i <= 10;$i++)
-
-        {
+    {        
             DB::table('users')->insert(
                 [
-                    'name' => 'User_'.$i,
-                    'email' => 'user_'.$i.'@mymail.com',
+                    'name' => 'User_1',
+                    'email' => 'user_1@mymail.com',
                     'password' => bcrypt('123456'),
                     'idComment' => rand(1,100),
                     'level'=> 0,
                     'quyen'=>0
-
+                ],
+                [
+                    'name' => 'User_2',
+                    'email' => 'user_2@mymail.com',
+                    'password' => bcrypt('123456'),
+                    'idComment' => rand(1,100),
+                    'level'=> 0,
+                    'quyen'=>0
+                ],
+                [
+                    'name' => 'User_3',
+                    'email' => 'user_3@mymail.com',
+                    'password' => bcrypt('123456'),
+                    'idComment' => rand(1,100),
+                    'level'=> 0,
+                    'quyen'=>0
+                ],
+                [
+                    'name' => 'User_4',
+                    'email' => 'user_4@mymail.com',
+                    'password' => bcrypt('123456'),
+                    'idComment' => rand(1,100),
+                    'level'=> 0,
+                    'quyen'=>0
+                ],
+                [
+                    'name' => 'User_5',
+                    'email' => 'user_5@mymail.com',
+                    'password' => bcrypt('123456'),
+                    'idComment' => rand(1,100),
+                    'level'=> 0,
+                    'quyen'=>0
+                ],
+                [
+                    'name' => 'Admin',
+                    'email' => 'admin@gmail.com',
+                    'password' => bcrypt('123456'),
+                    'idComment' => rand(1,100),
+                    'level'=> 0,
+                    'quyen'=>1
                 ]
             );
-        }
+        
     }
 }
