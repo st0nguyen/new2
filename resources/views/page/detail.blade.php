@@ -78,7 +78,7 @@
 			<hr>
 
 			<!-- Posted Comments -->
-
+			@if($tintuc->comments)			
 			@foreach($tintuc->comments as $binhluan)
 				<!-- Comment -->
 				<div class="media">
@@ -94,7 +94,7 @@
 					</div>
 				</div>
 			@endforeach
-
+			@endif	
 		</div>
 
 		<!-- Blog Sidebar Widgets Column -->

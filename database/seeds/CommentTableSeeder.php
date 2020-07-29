@@ -29,7 +29,7 @@ class CommentTableSeeder extends Seeder
         {
             DB::table('tbl_comment')->insert(
                 [
-                    'idUser' => rand(1,10),
+                    'idUser' => rand(1,5),
                     'idTinTuc' => rand(1,100),
                     'NoiDung' => $NoiDung[rand(0,9)],
                     'created_at' => new DateTime()
