@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-    protected $table = "tbl_comment"; // Create table connect to database
+    protected $table = "tbl_comment";
 
     public function tintuc()
     {

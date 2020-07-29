@@ -79,7 +79,7 @@
 
 			<!-- Posted Comments -->
 
-			@foreach($tintuc->Comments as $binhluan)
+			@foreach($tintuc->comments as $binhluan)
 				<!-- Comment -->
 				<div class="media">
 					<a class="pull-left" href="#">
@@ -87,7 +87,7 @@
 					</a>
 					<div class="media-body">
 						<h4 class="media-heading">
-							{{ $binhluan->Users->name }} |
+							{{ $binhluan->users->name }} |
 							<small>{{ ($binhluan->created_at) }}</small>
 						</h4>
 						{{ $binhluan->NoiDung }}
