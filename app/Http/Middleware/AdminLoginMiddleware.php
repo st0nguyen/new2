@@ -24,6 +24,6 @@ class AdminLoginMiddleware
                 return redirect('admin/dangnhap')->with('message','Tài khoản này không được phép truy cập!');
         }
         else
-            return redirect('admin/dangnnhap')->with('message','Bạn chưa đăng nhập!');
+            return redirect('admin/dangnhap')->with('message','Bạn chưa đăng nhập!');
     }
 }
