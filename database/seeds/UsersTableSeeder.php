@@ -18,7 +18,7 @@ class UsersTableSeeder extends Seeder
                     'password' => bcrypt('123456'),
                     'idComment' => rand(1,100),
                     'level'=> 0,
-                    'quyen'=>0
+                    'quyen'=>1
                 ],
                 [
                     'name' => 'User_2',
