@@ -11,7 +11,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {        
-            DB::table('users')->insert(
+            DB::table('users')->insert([
                 [
                     'name' => 'User_1',
                     'email' => 'user_1@mymail.com',
@@ -60,7 +60,7 @@ class UsersTableSeeder extends Seeder
                     'level'=> 0,
                     'quyen'=>1
                 ]
-            );
+            ]);
         
     }
 }
