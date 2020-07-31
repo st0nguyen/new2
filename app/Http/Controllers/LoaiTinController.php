@@ -24,7 +24,7 @@ class LoaiTinController extends Controller
     public function postThem(Request $request) {
         $this->validate($request,
             [
-                'Ten' => 'required|unique:tbl_LoaiTin|max:100',
+                'Ten' => 'required|unique:tbl_loaitin|max:100',
                 'TheLoai' => 'required'
             ],
             [

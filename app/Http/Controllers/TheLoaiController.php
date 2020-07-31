@@ -20,7 +20,7 @@ class TheLoaiController extends Controller
     public function postThem(Request $request){
         $this->validate($request,
         [
-            'Ten' => 'required|min:3|max:100|unique:tbl_TheLoai,Ten'
+            'Ten' => 'required|min:3|max:100|unique:tbl_theloai,Ten'
         ],
         [
             'Ten.required' => 'Bạn chưa nhập tên thể loại!',

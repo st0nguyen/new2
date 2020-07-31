@@ -28,7 +28,7 @@ class TinTucController extends Controller
             [
                 'idLoaiTin' => 'required',
                 // Yêu cầu phải có, min = 3, không trùng trong bảng TinTuc->cột tiêu để
-                'TieuDe' => 'required|min:3|unique:tbl_TinTuc,TieuDe',
+                'TieuDe' => 'required|min:3|unique:tbl_tintuc,TieuDe',
                 'TomTat' => 'required',
                 'NoiDung' => 'required',
                 'NoiBat' => 'required',
