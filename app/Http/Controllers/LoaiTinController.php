@@ -53,7 +53,7 @@ class LoaiTinController extends Controller
         $loaitin = LoaiTin::Find($id);
         $this->validate($request,
             [
-                'Ten' => 'required|unique:TBL_LoaiTin|max:100',
+                'Ten' => 'required|unique:tbl_loaitin|max:100',
                 'TheLoai' => 'required'
             ],
             [

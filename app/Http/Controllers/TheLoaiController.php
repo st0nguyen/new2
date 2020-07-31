@@ -48,7 +48,7 @@ class TheLoaiController extends Controller
     {
         $theloai = TheLoai::Find($id);
         $this->validate($request,
-            [   'Ten'          => 'required|min:3|max:100|unique:tbl_TheLoai,Ten'],
+            [   'Ten'          => 'required|min:3|max:100|unique:tbl_theloai,Ten'],
             [
                 'Ten.required' => 'Không được để trống',
                 'Ten.unique'  => 'Tên thể loại dã tồn tại',
