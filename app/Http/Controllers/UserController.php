@@ -103,6 +103,7 @@ class UserController extends Controller
     }
 
     public function postDangnhapAdmin(Request $request){
+        dd($request->all());
         $this->validate($request,
             [
                 'email' => 'required',
