@@ -36,7 +36,7 @@
                                 <?php
                                     $data = $theloai->TinTuc->where('NoiBat',1)->sortByDesc('created_at')->take(5);
                                     $chosen_article = $data->shift();
-                                    dd($chosen_article);
+                                    // dd($chosen_article);
                                 ?>
                                 <div class="col-md-8 border-right">
                                     <div class="col-md-5">
