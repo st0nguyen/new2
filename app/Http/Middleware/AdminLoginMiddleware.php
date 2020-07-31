@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class AdminLoginMiddleware
 {
@@ -16,6 +16,7 @@ class AdminLoginMiddleware
      */
     public function handle($request, Closure $next)
     {
+        dd(Auth::user());
         if(Auth::check())
         {
             $user = Auth::user();
