@@ -157,8 +157,9 @@ class HomeConTroller extends Controller
 
     public function Search(Request $request){
         $keyword = $request->keyword;
-        $tintuc = TinTuc::where('TieuDe','like',"%$request->keyword%")->orWhere('TomTat','like',"%$request->keyword%")->orWhere('TomTat','like',"%$request->keyword%")->paginate(5)->appends(['keyword' => $keyword]);
+        $tintuc = TinTuc::where('TieuDe','like',"%$request->keyword%")->orWhere('TomTat','like',"%$request->keyword%")->orWhere('TomTat','like',"%$request->keyword%")->paginate(10)->appends(['keyword' => $keyword]);
+        $soluong = TinTuc::where('TieuDe','like',"%$request->keyword%")->orWhere('TomTat','like',"%$request->keyword%")->orWhere('TomTat','like',"%$request->keyword%")->get();
 
-        return view('page.search',['tintuc' => $tintuc, 'keyword' => $request->keyword]);
+        return view('page.search',['tintuc' => $tintuc,'soluong' => $soluong, 'keyword' => $request->keyword]);
     }
 }
