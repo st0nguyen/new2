@@ -127,9 +127,11 @@ class TinTucController extends Controller
                 $tenhinh = str::random()."_".$name;
             }
             $file->move("upload/tintuc",$tenhinh);
-            unlink("upload/tintuc/".$tintuc->Hinh);
+            if($tintuc->Hinh){
+                unlink("upload/tintuc/".$tintuc->Hinh);
+              }
             $tintuc->Hinh = $tenhinh;
-        } 
+        }
         $tintuc->save();
         return redirect('admin/tintuc/sua/'.$id)->with('thongbao', 'Sửa thành công');
 
