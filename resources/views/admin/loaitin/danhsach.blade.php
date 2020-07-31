@@ -32,7 +32,7 @@
                         <td>{{$item->Ten}}</td>
                         <td>{{$item->TenKhongDau}}</td>
                         <td>{{$item->theloai->Ten}}</td>
-                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/loaitin/xoa/{{$item->id}}">Xóa</a></td>
+                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a onclick="return confirm('Bạn có chắc là muốn xóa không?')" href="admin/loaitin/xoa/{{$item->id}}">Xóa</a></td>
                         <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/loaitin/sua/{{$item->id}}">Sửa</a></td>
                     </tr>
                     @endforeach
