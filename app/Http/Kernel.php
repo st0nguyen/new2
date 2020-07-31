@@ -18,6 +18,7 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+        'adminAuth' => \App\Http\Middleware\AdminLoginMiddleware::class,
     ];
 
     /**
@@ -56,6 +57,6 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'adminAuth' => \App\Http\Middleware\AdminLoginMiddleware::class // Khai báo middleware mới trong kernel
+        'adminAuth' => \App\Http\Middleware\AdminLoginMiddleware::class,
     ];
 }
