@@ -2,6 +2,10 @@
     Tìm Kiếm với từ khóa "{{ $keyword }}"
 @endsection
 
+@section('keySearch')
+    {{ $keyword }}
+@endsection
+
 @extends('index')
 
 @section('content')

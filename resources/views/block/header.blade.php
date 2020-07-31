@@ -26,9 +26,9 @@
                 </ul>
 
                 <form method="GET" action="tim-kiem" class="navbar-form navbar-left" role="search">
-                    {{ csrf_field() }}
+                
                     <div class="form-group">
-                      <input type="text" name="keyword" class="form-control" placeholder="Bạn cần tìm gì?">
+                      <input type="text" name="keyword" class="form-control" placeholder="Bạn cần tìm gì?" value="@yield('keySearch')">
                     </div>
                     <button type="submit" class="btn btn-default">Tìm Kiếm</button>
                 </form>

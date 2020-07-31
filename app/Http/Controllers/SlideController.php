@@ -95,7 +95,8 @@ class SlideController extends Controller
         $slide->NoiDung = $request->slide_content;
         if($request->has('slide_url'))
             $slide->link = $request->slide_url;
-
+        else
+            $slide->link = str::slug($request->Ten,'-');            
         if($request->hasFile('slide_img')) // Kiểm tra xem người dùng có upload hình hay không
         {
             $img_file = $request->file('slide_img'); // Nhận file hình ảnh người dùng upload lên server
