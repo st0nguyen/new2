@@ -101,7 +101,7 @@
 
                     {{-- Thêm mới tin tức --}}
                     <button type="submit" class="btn btn-default">Thêm tin tức</button>
-                    <button type="reset" class="btn btn-default">Làm mới</button>
+           
                 <form>
             </div>
         </div>

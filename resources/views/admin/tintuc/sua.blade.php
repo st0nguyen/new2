@@ -126,7 +126,7 @@
 
                     {{-- Thêm mới tin tức --}}
                     <button type="submit" class="btn btn-default">Sửa</button>
-                    <button type="reset" class="btn btn-default">Làm mới</button>
+                  
                 </form>
                 <hr>
                 <div class="row pt-3">

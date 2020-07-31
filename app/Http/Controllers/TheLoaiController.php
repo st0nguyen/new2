@@ -24,7 +24,7 @@ class TheLoaiController extends Controller
         ],
         [
             'Ten.required' => 'Bạn chưa nhập tên thể loại!',
-            'Ten.unique'  => 'Tên thể loạid dã tồn tại',
+            'Ten.unique'  => 'Tên thể loại đã tồn tại',
             'Ten.min'      => 'Tên thể loại phải có độ dài từ 3 đến 100 kí tự',
             'Ten.max'      => 'Tên thể loại phải có độ dài từ 3 đến 100 kí tự',
 

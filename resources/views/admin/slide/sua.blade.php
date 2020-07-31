@@ -58,7 +58,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-default">Thực hiện</button>
-                        <button type="reset" class="btn btn-default btn-mleft">Nhập Lại</button>
+                       
                         </form>
                 </div>
             </div>

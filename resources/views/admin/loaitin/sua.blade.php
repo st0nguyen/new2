@@ -44,7 +44,7 @@
                     </div>
                     
                     <button type="submit" class="btn btn-default">Sửa loại tin</button>
-                    <button type="reset" class="btn btn-default">Làm trống</button>
+                   
                 <form>
             </div>
         </div>

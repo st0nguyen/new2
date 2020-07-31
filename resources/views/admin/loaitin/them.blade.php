@@ -37,7 +37,7 @@
                         </select>
                     </div>
                     <button type="submit" class="btn btn-default">Thêm loại tin</button>
-                    <button type="reset" class="btn btn-default">Làm mới</button>
+                
                 <form>
             </div>
         </div>
