@@ -16,7 +16,7 @@ class AdminLoginMiddleware
      */
     public function handle($request, Closure $next)
     {
-        dd(Auth::user());
+        // dd(Auth::user());
         if(Auth::check())
         {
             $user = Auth::user();
