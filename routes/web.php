@@ -43,7 +43,7 @@ Route::get('tim-kiem','HomeController@Search');
 // admin
 Route::get('/admin/dangnhap','UserController@getDangnhapAdmin');
 Route::get('/admin','UserController@getDangnhapAdmin');
-Route::post('/admin/dangnhap','UserController@postDangnhapAdmin');
+Route::post('/admin/dangnhap','UserController@postDangnhapAdmin')->name('admin.login.post');
 Route::get('/admin/logout','UserController@logout');
 
 Route::group(['prefix' => 'admin','middleware' => 'adminAuth'],  function () {

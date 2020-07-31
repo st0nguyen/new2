@@ -47,7 +47,7 @@
                         @endif
                     </div>
                     <div class="panel-body">
-                        <form role="form" method="POST">
+                    <form role="form" action="{{route('admin.login.post')}}" method="POST">
                             <fieldset>
                                  {{-- Token --}}
                                  {{ csrf_field() }}
