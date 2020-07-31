@@ -46,7 +46,7 @@
                                     </div>
 
                                     <div class="col-md-7">
-                                        <h3><a href="tin-tuc/{{ $chosen_article['TieuDeKhongDau'] }}.html">{{ $chosen_article['TieuDe'] }}</a></h3>
+                                        <h3><a href="tin-tuc/{{$chosen_article['TieuDeKhongDau']}}.html">{{ $chosen_article['TieuDe'] }}</a></h3>
                                         <p>{!! $chosen_article['TomTat'] !!}</p>
                                         <a class="btn btn-primary" href="tin-tuc/{{ $chosen_article['TieuDeKhongDau'] }}.html">Xem Thêm <span class="glyphicon glyphicon-chevron-right"></span></a>
                                     </div>
@@ -56,7 +56,7 @@
 
                                 <div class="col-md-4">
                                     @foreach($data->all() as $remaining_article)
-                                        <a href="tin-tuc/{{ $remaining_article['TieuDeKhongDau'] }}.html">
+                                        <a href="tin-tuc/{{$remaining_article['TieuDeKhongDau']}}.html">
                                             <h4>
                                                 <span class="icon-rem"></span>                                               
                                                 {{ $remaining_article['TieuDe'] }}
