@@ -41,7 +41,7 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="admin_assets/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="admin_assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -53,7 +53,7 @@
     <script src="admin_assets/dist/js/sb-admin-2.js"></script>
 
     <!-- DataTables JavaScript -->
-    <script src="admin_assets/bower_components/DataTables/media/js/jquery.dataTables.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="admin_assets/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
