@@ -47,7 +47,7 @@
                         @endif
                     </div>
                     <div class="panel-body">
-                        <form role="form" action="admin/dangnhap/" method="POST">
+                        <form role="form" method="POST">
                             <fieldset>
                                  {{-- Token --}}
                                  {{ csrf_field() }}
