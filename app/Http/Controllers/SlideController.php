@@ -39,6 +39,8 @@ class SlideController extends Controller
         $slide->NoiDung = $request->slide_content;
         if($request->has('slide_url'))
             $slide->link = $request->slide_url;
+        if($request->slide_url == 0)
+            $slide->link = '';    
 
         if($request->hasFile('slide_img')) // Kiểm tra xem người dùng có upload hình hay không
         {
@@ -65,7 +67,7 @@ class SlideController extends Controller
         }
         else
             $slide->Hinh = ''; // Nếu người dùng không upload hình thì sẽ gán đường dẫn là rỗng
-
+// dd($slide);
         $slide->save();
 
         return redirect('admin/slide/them')->with('message','Thêm Slide thành công!');
@@ -95,8 +97,8 @@ class SlideController extends Controller
         $slide->NoiDung = $request->slide_content;
         if($request->has('slide_url'))
             $slide->link = $request->slide_url;
-        else
-            $slide->link = str::slug($request->Ten,'-');            
+        if($request->slide_url == 0)
+            $slide->link = '';             
         if($request->hasFile('slide_img')) // Kiểm tra xem người dùng có upload hình hay không
         {
             $img_file = $request->file('slide_img'); // Nhận file hình ảnh người dùng upload lên server
@@ -116,9 +118,10 @@ class SlideController extends Controller
                 $random_file_name = str::random(4).'_'.$img_file_name;
             }
             echo $random_file_name;
-
-            unlink('upload/slide/'.$slide->Hinh);
+            
+           
             $img_file->move('upload/slide',$random_file_name); // file hình được upload sẽ chuyển vào thư mục có đường dẫn như trên
+          
             $slide->Hinh = $random_file_name;
         }
 

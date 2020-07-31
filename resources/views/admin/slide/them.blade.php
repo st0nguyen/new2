@@ -35,13 +35,13 @@
 
                         <div class="form-group">
                             <p><label>Tên</label></p>
-                            <input type="text" class="form-control input-width" name="slide_name" placeholder="Nhập Tên của Slide" value="{{ old('slide_name') }}" />
+                            <input type="text" class="form-control input-width" name="slide_name" placeholder="Nhập Tên của Slide" value="" />
                         </div>
 
                         <div class="form-group">
                             <p><label>Nội Dung</label></p>
                             <textarea name="slide_content" id="demo" class="form-control ckeditor" rows="3">
-                                    {{ old('slide_content') }}
+                                  
                                 </textarea>
                         </div>
 
