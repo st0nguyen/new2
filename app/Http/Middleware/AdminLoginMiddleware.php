@@ -18,7 +18,8 @@ class AdminLoginMiddleware
     {
         if(Auth::check())
         {
-            if(Auth::user()->quyen == 1)
+            $user = Auth::user();
+            if($user->quyen == 1)
                 return $next($request);
             else
                 return redirect('admin/dangnhap')->with('message','Tài khoản này không được phép truy cập!');

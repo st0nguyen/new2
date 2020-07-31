@@ -114,7 +114,7 @@ class UserController extends Controller
                 'password.min' => 'Mật Khẩu gồm tối thiểu 6 ký tự!',
                 'password.max' => 'Mật Khẩu gồm tối đa 32 ký tự!'
             ]);
-        if(Auth::attempt(['email' => $request->email, 'password' => $request->password]))
+        if(Auth::attempt(['email' => $request->email, 'password' => ($request->password)]))
             return redirect('admin/tintuc/danhsach');
         else
             return redirect('admin/dangnhap')->with('message','Đăng Nhập không thành công!');

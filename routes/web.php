@@ -12,6 +12,8 @@ use App\TheLoai;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// Pages
 Route::get('/', 'HomeController@index');
 
 Route::get('lien-he','HomeController@Contact');
@@ -38,12 +40,7 @@ Route::post('dang-ky-tai-khoan','HomeController@DoRegister');
 
 Route::get('tim-kiem','HomeController@Search');
 
-
-//Route::get('/admin','AdminController@index');
-//Route::get('/dashboard','AdminController@show_dashboard');
-//Route::get('/logout','AdminController@logout');
-//Route::post('/admin-dashboard','AdminController@dashboard');
-
+// admin
 Route::get('/admin/dangnhap','UserController@getDangnhapAdmin');
 Route::get('/admin','UserController@getDangnhapAdmin');
 Route::post('/admin/dangnhap','UserController@postDangnhapAdmin');
