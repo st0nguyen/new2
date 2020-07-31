@@ -50,7 +50,7 @@
                         <form role="form" action="admin/dangnhap/" method="POST">
                             <fieldset>
                                  {{-- Token --}}
-                                <input type="hidden" name="_token" value="{{csrf_token()}}"/>
+                                 {{ csrf_field() }}
 
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Địa chỉ Email" name="email" type="email" autofocus>
