@@ -46,7 +46,7 @@ Route::get('/admin','UserController@getDangnhapAdmin');
 Route::post('/admin/dangnhap','UserController@postDangnhapAdmin');
 Route::get('/admin/logout','UserController@logout');
 
-Route::group(['prefix' => 'admin','middleware' => 'adminAuth'],  function () {
+Route::group(['prefix' => 'admin'],  function () {
     /////////////////
     // Group The Loai
     /////////////////
