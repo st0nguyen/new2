@@ -27,7 +27,6 @@ class TinTucController extends Controller
         $this->validate($request,
             [
                 'idLoaiTin' => 'required',
-                // Yêu cầu phải có, min = 3, không trùng trong bảng TinTuc->cột tiêu để
                 'TieuDe' => 'required|min:3|unique:tbl_tintuc,TieuDe',
                 'TomTat' => 'required',
                 'NoiDung' => 'required',
@@ -137,7 +136,6 @@ class TinTucController extends Controller
 
     }
 
-    // Xóa
     public function getXoa($id) {
         $tintuc = TinTuc::find($id);
         $tintuc->delete();

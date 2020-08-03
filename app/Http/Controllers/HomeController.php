@@ -31,7 +31,7 @@ class HomeConTroller extends Controller
     }
 
     public function LoaiTin($unsigned_name){
-        $loaitin = LoaiTin::where('TenKhongDau',$unsigned_name)->first(); // first dùng để lấy một dữ liệu duy nhất, get dùng để lấy nhiều dòng dữ liệu.
+        $loaitin = LoaiTin::where('TenKhongDau',$unsigned_name)->first(); 
         $tintuc = TinTuc::where('idLoaiTin',$loaitin->id)->paginate(5);
         return view('page.category',['loaitin' => $loaitin, 'tintuc' => $tintuc]);
     }
@@ -58,7 +58,7 @@ class HomeConTroller extends Controller
 
     public function LoginAuth(Request $request)
     {
-        // Cách sử dụng validator nếu muốn dùng if để kiểm tra lỗi dữ liệu đầu vào trước khi kiểm tra đăng nhập (Tham khảo mục #Manually Creating Validators tại trang chủ Laravel)
+       
         $validator = Validator::make($request->all(),
             [
                 'email' => 'required',
