@@ -28,7 +28,7 @@
                             <!-- item -->
                             <div class="row-item row">
                                 <h3>
-                                    <a class="cate-list">{{ $theloai->Ten }}</a> |  
+                                    <a class="cate-list" href="the-loai/{{ $theloai->TenKhongDau }}">{{ $theloai->Ten }}</a> |  
                                     @foreach($theloai->LoaiTin as $loaitin)
                                         <small><a href="loai-tin/{{ $loaitin->TenKhongDau }}"><i>{{ $loaitin->Ten }}</i></a>/</small>
                                     @endforeach

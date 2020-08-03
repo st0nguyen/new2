@@ -18,6 +18,8 @@ Route::get('/', 'HomeController@index');
 
 Route::get('lien-he','HomeController@Contact');
 
+Route::get('the-loai/{unsigned_name}','HomeController@TheLoai');
+
 Route::get('loai-tin/{unsigned_name}','HomeController@LoaiTin');
 
 Route::get('tin-tuc/{unsigned_name}.html','HomeController@TinTuc');

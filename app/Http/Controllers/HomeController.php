@@ -36,6 +36,15 @@ class HomeConTroller extends Controller
         return view('page.category',['loaitin' => $loaitin, 'tintuc' => $tintuc]);
     }
 
+    public function TheLoai($unsigned_name){
+        $theloai = TheLoai::where('TenKhongDau',$unsigned_name)->first(); 
+        // $loaitin = LoaiTin::where('idTheLoai',$theloai->id)->get();
+        
+        // $tintuc = TinTuc::where('idLoaiTin',$loaitin->id)->paginate(5);
+        // dd($tintuc);
+        return view('page.category-parent',['theloai' => $theloai]);
+    }
+
     public function TinTuc($unsigned_name){
         $tintuc = TinTuc::where('TieuDeKhongDau',$unsigned_name)->first();
         $tinnoibat = TinTuc::where('NoiBat',1)->take(4)->get();
