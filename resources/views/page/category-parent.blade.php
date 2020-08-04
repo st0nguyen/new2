@@ -18,8 +18,8 @@
                     <h4><b>{{ $theloai->Ten }}</b></h4>
                 </div>
                 <?php
-                $data = $theloai->TinTuc->all();
-                $tintuc = $data;
+                // $data = $theloai->TinTuc->all();
+                // $tintuc = $data;
                 // dd($chosen_article);
                 ?>
                 @foreach($tintuc as $chitiet)
@@ -43,7 +43,7 @@
 
                 <!-- Pagination -->
                 <div class="row text-center">
-                
+                    {{ $tintuc->links() }}
                 </div>
                 <!-- /.row -->
 

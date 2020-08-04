@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Validator;
 use App\TheLoai;
 use App\LoaiTin;
 use App\TinTuc;
 use App\User;
 use App\Slide;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
+
 
 class HomeConTroller extends Controller
 {
@@ -40,9 +42,14 @@ class HomeConTroller extends Controller
         $theloai = TheLoai::where('TenKhongDau',$unsigned_name)->first(); 
         // $loaitin = LoaiTin::where('idTheLoai',$theloai->id)->get();
         
-        // $tintuc = TinTuc::where('idLoaiTin',$loaitin->id)->paginate(5);
-        // dd($tintuc);
-        return view('page.category-parent',['theloai' => $theloai]);
+        // $tintuc = TinTuc::where('id',$theloai->id )->loaitin()->get();
+        $tintuc = DB::table('tbl_tintuc')
+            ->join('tbl_loaitin', 'tbl_tintuc.idLoaiTin', '=', 'tbl_loaitin.id')
+            ->where('tbl_loaitin.idTheLoai', $theloai->id)
+      
+            ->paginate(5);
+        // dd($users);
+        return view('page.category-parent',['theloai' => $theloai ,'tintuc' => $tintuc]);
     }
 
     public function TinTuc($unsigned_name){
